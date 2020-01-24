@@ -54,7 +54,7 @@ public class Product {
     public void addAssociatedPart(Part partsToAdd) {associatedParts.add(partsToAdd);}
 
     public boolean removeAssociatedParts(int partToRemove) {
-
+        return true;
     }
 
 }

@@ -1,4 +1,13 @@
 package View_Controller;
 
-public class AlertMessage {
+import javafx.fxml.Initializable;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AlertMessage implements Initializable {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }

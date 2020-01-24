@@ -10,16 +10,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainScreenController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#909db5" height="611.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="1050.0" />
       <Text layoutX="46.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVENTORY MANAGEMENT SYSTEM" textAlignment="CENTER" wrappingWidth="957.048828125">
          <font>
             <Font name="System Bold" size="48.0" />
          </font></Text>
-      <Button fx:id="addPartButton" layoutX="75.0" layoutY="472.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="ADD" textFill="#07b218" />
-      <Button fx:id="modifyPartButton" layoutX="228.0" layoutY="472.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="MODIFY" textFill="#0c1ccd" />
-      <Button fx:id="deletePartButton" layoutX="373.0" layoutY="472.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="DELETE" textFill="RED" />
+      <Button layoutX="75.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#addParts" prefHeight="25.0" prefWidth="100.0" text="ADD" textFill="#07b218" />
+      <Button layoutX="228.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#modifyParts" prefHeight="25.0" prefWidth="100.0" text="MODIFY" textFill="#0c1ccd" />
+      <Button layoutX="373.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#deleteParts" prefHeight="25.0" prefWidth="100.0" text="DELETE" textFill="RED" />
       <TableView fx:id="partTable" layoutX="75.0" layoutY="191.0" prefHeight="257.0" prefWidth="400.0">
         <columns>
           <TableColumn fx:id="partIDCol" prefWidth="75.0" text="Part ID" />
@@ -42,13 +42,13 @@
             <TableColumn prefWidth="114.0" text="Price/Cost per Unit" />
         </columns>
       </TableView>
-      <Button fx:id="addProductButton" layoutX="578.0" layoutY="472.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="ADD" textFill="#07b218" />
-      <Button fx:id="modifyProductButton" layoutX="728.0" layoutY="472.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="MODIFY" textFill="#0c1ccd" />
-      <Button fx:id="deleteProductButton" layoutX="878.0" layoutY="472.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="DELETE" textFill="RED" />
+      <Button layoutX="578.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#addProducts" prefHeight="25.0" prefWidth="100.0" text="ADD" textFill="#07b218" />
+      <Button layoutX="728.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#modifyProducts" prefHeight="25.0" prefWidth="100.0" text="MODIFY" textFill="#0c1ccd" />
+      <Button layoutX="878.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#deleteProducts" prefHeight="25.0" prefWidth="100.0" text="DELETE" textFill="RED" />
       <TextField fx:id="productSearchBox" layoutX="696.0" layoutY="147.0" prefHeight="25.0" prefWidth="282.0" />
-      <Button fx:id="partSearchButton" layoutX="75.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#searchPart" prefHeight="25.0" prefWidth="100.0" text="SEARCH" />
-      <Button fx:id="productSearchButton" layoutX="578.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#searchProduct" prefHeight="25.0" prefWidth="100.0" text="SEARCH" />
-      <Button layoutX="878.0" layoutY="547.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="EXIT">
+      <Button layoutX="75.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#searchParts" prefHeight="25.0" prefWidth="100.0" text="SEARCH" />
+      <Button layoutX="578.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#searchProducts" prefHeight="25.0" prefWidth="100.0" text="SEARCH" />
+      <Button layoutX="878.0" layoutY="547.0" mnemonicParsing="false" onMouseClicked="#exitInvProgram" prefHeight="25.0" prefWidth="100.0" text="EXIT">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

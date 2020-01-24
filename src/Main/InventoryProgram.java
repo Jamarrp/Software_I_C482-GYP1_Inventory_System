@@ -20,9 +20,9 @@ public class InventoryProgram extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("MainScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View_Controller/MainScreen.fxml"));
         primaryStage.setTitle("INVENTORY MANAGEMENT SYSTEM");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 1050, 611));
         primaryStage.show();
     }
 
